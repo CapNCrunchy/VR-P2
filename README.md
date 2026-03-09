@@ -3,6 +3,7 @@
 1. Clone the repo locally
 2. make a branch with your name and feature you're working on:
 - e.g. "git branch Jesse-Scene"
+- "git switch Jesse-Scene"
 3. make changes
 - "git add *"
 - "git commit -m "Initial scene creation" "
