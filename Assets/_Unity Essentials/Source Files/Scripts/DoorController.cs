@@ -1,18 +1,3 @@
-using UnityEngine;
-
-public class DoorController : MonoBehaviour
-{
-    private Animator doorAnimator;
-
-    private void Start()
-    {
-        doorAnimator = GetComponent<Animator>();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Open the door");
-        doorAnimator.SetTrigger("Door_Open");
-        
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:38599fbd9892dcb350f138dab41df001b6bc28ef3e476284c82fc6974ecb6b87
+size 342

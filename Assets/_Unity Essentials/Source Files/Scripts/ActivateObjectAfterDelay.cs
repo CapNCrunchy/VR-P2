@@ -1,28 +1,3 @@
-using UnityEngine;
-using System.Collections;
-
-public class ActivateObjectAfterDelay : MonoBehaviour
-{
-    // Time delay in seconds
-    public float delay = 5.0f;
-
-    // Use this for initialization
-    void Start()
-    {
-        // Start the coroutine
-        StartCoroutine(ActivationRoutine());
-    }
-
-    // Coroutine to activate child objects after a delay
-    private IEnumerator ActivationRoutine()
-    {
-        // Wait for the specified delay
-        yield return new WaitForSeconds(delay);
-
-        // Activate all child objects
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(true);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b550c23b8e33100a3baf863505071e79b505c247bc765edba1223194f5ad8d14
+size 659
