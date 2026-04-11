@@ -58,3 +58,11 @@ git push
 
 git switch main
 git merge Jesse-Scene
+
+## Contributors
+- Savannah Ogletree
+- Rosalinda “Lincy” Phipps
+- Jesse Bloom
+- Victoria Pineda
+- Connor Lausch
+- Katie Boetig
