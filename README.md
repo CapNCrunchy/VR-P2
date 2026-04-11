@@ -1,22 +1,60 @@
-# VR-P2
+# VR-P2: VR Relaxation Experience
 
-1. Clone the repo locally
-2. make a branch with your name and feature you're working on:
-- e.g. "git branch Jesse-Scene"
-- "git switch Jesse-Scene"
-3. make changes
-- "git add *"
-- "git commit -m "Initial scene creation" "
-4. Pull any changes from the repo
-- "git fetch"
-- "git pull"
-5. Push to your remote branch
-- "git push"
+## Project Description
+This project is a VR relaxation experience that allows users to explore multiple immersive environments, including a beach, campsite, waterfall, and open field. Each scene includes interactive elements, animations, and ambient audio to enhance user engagement and relaxation.
 
-If you want to merge it to main you'll need to make sure there's no conflicts
+## Features
+- Multiple interactive VR scenes (Beach, Campfire, Waterfall, Open Field)
+- Object interaction (e.g., pickable items, sand creation)
+- Ambient sound effects and animations
+- Scene selection interface
 
-6. Move to Main branch
-- "git switch main"
-7. Merge the branch
-- "git merge Jesse-Scene"
-You will probably get merge conflicts here that need to be resolved
+## How to Run the Project
+1. Clone the repository
+2. Open the project in Unity (version 6000.3.Xf1)
+3. Open the main scene from the /Assets/Scenes folder
+4. Press Play or run
+
+## Controls
+- Use VR controllers to move and rinteract
+- Select scenes using the menu interface
+- Interact with objects by grabbing or clicking
+
+## Scenes
+- Scene 1 (Scene selection interface, overall user flow between environments
+- Scene 2 (Waterfall environment, particles, audio)
+- Scene 3 (Beach interaction system)
+- Scene 4 (Campfire scene, environment assets)
+- Scene 5 (Open field, animations, sound)
+
+## Team Contributions
+- Final Testing
+- Conducted usability testing with potential users
+- Fixed minor bugs and improved interaction flow
+- Verified all scenes and features function correctly
+- Development Workflow (Git)
+
+# Clone the repo locally
+# Create a branch:
+
+git branch Jesse-Scene
+git switch Jesse-Scene
+
+# Make changes:
+
+git add *
+git commit -m "Initial scene creation"
+
+# Sync with repo:
+
+git fetch
+git pull
+
+# Push changes:
+
+git push
+
+# Merge to main:
+
+git switch main
+git merge Jesse-Scene
