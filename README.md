@@ -21,7 +21,7 @@ This project is a VR relaxation experience that allows users to explore multiple
 - Interact with objects by grabbing or clicking
 
 ## Scenes
-- Scene 1 (Scene selection interface, overall user flow between environments
+- Scene 1 (Scene selection interface, scene navigation system, session timer to manage user flow and pacing across environments)
 - Scene 2 (Waterfall environment, particles, audio)
 - Scene 3 (Beach interaction system)
 - Scene 4 (Campfire scene, environment assets)
