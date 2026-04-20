@@ -18,6 +18,8 @@ public class SceneBuilder : MonoBehaviour
         BuildFence();
         PositionCamera();
         CreatePollenParticles();
+        SpawnCollectibles(12);
+        SetupCollectibleManager();
     }
 
     // ─────────────────────────────────────────────────────────
@@ -103,7 +105,7 @@ public class SceneBuilder : MonoBehaviour
         trunk.transform.localPosition = new Vector3(0, trunkH / 2f, 0);
         trunk.transform.localScale    = new Vector3(0.25f, trunkH / 2f, 0.25f);
         trunk.GetComponent<Renderer>().material = MakeMat(new Color(0.4f, 0.25f, 0.1f));
-        Destroy(trunk.GetComponent<Collider>());
+        // keep trunk collider so mouse raycast can hit it
 
         // Canopy (layered spheres for a fluffy look)
         Color leafCol = new Color(
@@ -122,8 +124,12 @@ public class SceneBuilder : MonoBehaviour
                 Random.Range(-0.2f, 0.2f));
             canopy.transform.localScale = new Vector3(s, s * 0.85f, s);
             canopy.GetComponent<Renderer>().material = MakeMat(leafCol);
-            Destroy(canopy.GetComponent<Collider>());
+            // keep collider on layer 0 (main canopy) for raycast hits; remove the rest
+            if (layer > 0) Destroy(canopy.GetComponent<Collider>());
         }
+
+        root.AddComponent<WindSway>();
+        root.AddComponent<TreeShake>();
     }
 
     // ─────────────────────────────────────────────────────────
@@ -462,6 +468,58 @@ public class SceneBuilder : MonoBehaviour
             Camera.main.transform.position = new Vector3(0f, 2f, -12f);
             Camera.main.transform.rotation = Quaternion.Euler(10f, 0f, 0f);
         }
+    }
+
+    // ─────────────────────────────────────────────────────────
+    // COLLECTIBLES
+    // ─────────────────────────────────────────────────────────
+    void SpawnCollectibles(int count)
+    {
+        Color[] starColors = {
+            new Color(1f, 0.9f, 0.1f),   // gold
+            new Color(0.4f, 0.9f, 1f),   // cyan
+            new Color(1f, 0.4f, 0.8f),   // pink
+            new Color(0.5f, 1f, 0.4f),   // green
+        };
+
+        for (int i = 0; i < count; i++)
+        {
+            float x = Random.Range(-28f, 28f);
+            float z = Random.Range(-28f, 28f);
+            Color col = starColors[Random.Range(0, starColors.Length)];
+            MakeCollectibleOrb(new Vector3(x, 0.6f, z), col);
+        }
+    }
+
+    void MakeCollectibleOrb(Vector3 pos, Color col)
+    {
+        GameObject orb = new GameObject("CollectibleOrb");
+        orb.transform.position = pos;
+
+        // Inner sphere
+        GameObject inner = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        inner.transform.SetParent(orb.transform);
+        inner.transform.localPosition = Vector3.zero;
+        inner.transform.localScale    = new Vector3(0.22f, 0.22f, 0.22f);
+        inner.GetComponent<Renderer>().material = MakeMat(col);
+        // keep collider on inner sphere so mouse raycast can hit it
+
+        // Outer ring (flat torus-like disc using a scaled sphere)
+        GameObject ring = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        ring.transform.SetParent(orb.transform);
+        ring.transform.localPosition = Vector3.zero;
+        ring.transform.localScale    = new Vector3(0.38f, 0.04f, 0.38f);
+        Color ringCol = new Color(col.r * 0.8f, col.g * 0.8f, col.b * 0.8f);
+        ring.GetComponent<Renderer>().material = MakeMat(ringCol);
+        Destroy(ring.GetComponent<Collider>());
+
+        orb.AddComponent<Collectible>();
+    }
+
+    void SetupCollectibleManager()
+    {
+        GameObject mgr = new GameObject("CollectibleManager");
+        mgr.AddComponent<CollectibleManager>();
     }
 
     // ─────────────────────────────────────────────────────────
