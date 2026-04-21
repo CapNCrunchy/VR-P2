@@ -1,28 +1,3 @@
-using UnityEngine;
-
-public class Collectible : MonoBehaviour
-{
-    public float rotationSpeed;
-    public GameObject onCollectEffect;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Rotate(0, rotationSpeed, 0);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-            Instantiate(onCollectEffect, transform.position, transform.rotation);
-        }
-        
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c233b8838d2e0f57cfc6fc27668d375332715f3cbe0d731ac419a5ec1ee92eb
+size 636

@@ -1,14 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!134 &13400000
-PhysicMaterial:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Ball_Bouncy_StarterScene
-  dynamicFriction: 0.6
-  staticFriction: 0.6
-  bounciness: 1
-  frictionCombine: 0
-  bounceCombine: 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:ca27fd529b3034002123abd35081bc1b8cbec0916a9d785d4d5020351e20e588
+size 341
