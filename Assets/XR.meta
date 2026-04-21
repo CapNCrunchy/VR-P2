@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<<< HEAD:Assets/XR.meta
-guid: 3fb69fd4a3e9a9143a362d30a8e3f747
-========
-guid: 004f0e70ab2efb54a9d93a283d657b97
->>>>>>>> asset-add:Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/Editor.meta
-=======
-guid: b98cedbcb8b517d4fb4746629fcc89b4
->>>>>>> asset-add
-folderAsset: yes
-DefaultImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:5574c51c90f3d776592e7897f0a0b8a5c2a2ae5e3a1b80d035e5af45cb0a318d
+size 417

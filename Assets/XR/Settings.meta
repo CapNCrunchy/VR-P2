@@ -1,12 +1,3 @@
-fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 84165d6cf1459b8449ed2335ec4e6e0b
-=======
-guid: 26b63d117a7a40e4e906f6daebe78385
->>>>>>> asset-add
-folderAsset: yes
-DefaultImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:b18991914032458f04d9e4396f910847ebfbaac6f89dc149a275532cf29c31dc
+size 250
