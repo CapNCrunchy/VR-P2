@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/XR.meta
 guid: 8d529351df1343a4286e8cdf6b284fb7
+========
+guid: 004f0e70ab2efb54a9d93a283d657b97
+>>>>>>>> asset-add:Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/Editor.meta
+=======
+guid: b98cedbcb8b517d4fb4746629fcc89b4
+>>>>>>> asset-add
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

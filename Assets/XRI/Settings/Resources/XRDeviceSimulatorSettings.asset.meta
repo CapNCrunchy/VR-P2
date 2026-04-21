@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8a62169c38abaeb458d72b402960caee
+=======
+guid: 3a2978a3f66c55f439575f45c922a3e4
+>>>>>>> asset-add
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
